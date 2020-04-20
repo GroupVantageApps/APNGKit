@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "APNGKit"
-  s.version      = "1.1.3"
+  s.version      = "1.1.4"
   s.summary      = "High performance and delightful way to play with APNG format in iOS."
 
   s.description  = <<-DESC
@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   s.source_files  = "APNGKit/*.{h,swift}", "APNGKit/libpng-apng/*.{h,c,S}"
   s.public_header_files = ["APNGKit/APNGKit.h", "APNGKit/libpng-apng/include/png.h", "APNGKit/libpng-apng/include/pnglibconf.h", "APNGKit/libpng-apng/include/pngconf.h"]
   s.library   = "z"
-  s.swift_versions = ["4.2"]
+  s.swift_versions = ["5.0"]
 end
