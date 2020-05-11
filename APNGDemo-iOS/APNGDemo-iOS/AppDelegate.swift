@@ -30,17 +30,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if #available(iOS 13.0, *) {
-            let coloredAppearance = UINavigationBarAppearance()
-            coloredAppearance.backgroundColor = UIColor(red: 68.0 / 255, green: 74.0 / 255, blue: 89.0 / 255, alpha: 1.0)
-            coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            
-            UINavigationBar.appearance().standardAppearance = coloredAppearance
-        }
-
+        application.statusBarStyle = .lightContent
         UINavigationBar.appearance().tintColor = UIColor.white
         return true
     }
@@ -70,8 +64,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
-class NavigationController: UINavigationController {
-    override var childViewControllerForStatusBarStyle: UIViewController? {
-        return topViewController
-    }
-}
